@@ -39,9 +39,6 @@ set(HAVOK_SOURCES
 set(Python_EXECUTABLE "C:/Users/exozg/.pyenv/pyenv-win/versions/3.11.9/python.exe")
 
 find_package(Python REQUIRED COMPONENTS Interpreter Development)
-if(NOT "${Python_VERSION}" STREQUAL "3.11.9")
-    message(FATAL_ERROR "Python 3.11.9 is required, but found ${Python_VERSION}")
-endif()
 
 add_library(havok_core STATIC ${HAVOK_SOURCES})
 target_include_directories(havok_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
